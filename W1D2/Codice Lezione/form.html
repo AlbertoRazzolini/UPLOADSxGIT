@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize.css/8.0.1/normalize.min.css">
+    <title>FORM</title>
+</head>
+<body>
+    <header>
+        <h1>FORM</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">TABELLE</a></li>
+                <li><a href="form.html">FORM</a></li>
+                <li><a href="multimedia.html">MULTIMEDIA</a></li>
+                <li><a href="layout.html">LAYOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form method="get" action="grazie.html">
+        <!-- Campoi di input -->
+        <h4>Campi obbligatori</h4>
+            <label for="nome">Nome completo: *</label>
+                <input type="text" id="nome" name="nome" placeholder="Inserisci nome" required><br>
+            <label for="email">Email: *</label>
+                <input type="email" id="email" name="email" placeholder="Inserisci email" required><br>
+            <label for="address">Indirizzo: *</label>
+                <input type="text" id="address" name="address" placeholder="Inserisci indirizzo"><br>
+            <label  for="password">Password: *</label>
+                <input type="password" id="password" name="password" placeholder="Password" required><br>
+            <label for="username">Username: *</label>
+                <input type="text" id="username" name="username" placeholder="Inserisci username" required><br>
+            <label for="joinDate">Data di iscrizione:</label>
+                <input type="date" id="joinDate" name="joinDate"><br>
+            <label for="courses">Numero di corsi</label>
+                <input type="number" id="courses" name="courses" min="0" max="10"><br>
+        <!-- Menu a tendina-select -->
+            <label for="frequency">Frequenza:</label>
+            <select id="frequency" name="frequency">
+                <option value="" selected></option>
+                <option value="daily">Quotidiana</option>
+                <option value="weekly">Settimanale</option>
+                <option value="monthly">Mensile</option>
+            </select><br><br>
+        <!-- Textarea -->
+         <label for="message">Messaggio:</label><br>
+                <textarea id="message" name="message" rows="3" cols="40" placeholder="Inserisci il tuo messaggio"></textarea><br><br>
+        <!-- checkbox e radio buttons -->
+         <h4>Scegli i tipi di corsi che vuoi frequentare:</h4>
+            <label>
+                <input type="checkbox" name="courseTypes" value="HTML"> Sviluppo Web
+            </label>
+            <label>
+                <input type="checkbox" name="courseTypes" value="CSS"> Design
+            </label>
+            <label>
+                <input type="checkbox" name="courseTypes" value="JAVAscript"> Programmazione
+            </label>
+         <h4> seleziona il genere di corso:</h4> 
+            <label>
+                <input type="radio" name="courseType" value="FULLSTACK"> FULLSTACK
+            </label>
+            <label>
+                <input type="radio" name="courseType" value="BACKEND"> BACKEND
+            </label>
+            <label>
+                <input type="radio" name="courseType" value="FRONTEND"> FRONTEND
+            </label><br><br>
+
+        <button type="submit">Invia</button>
+        <button type="reset">Cancella</button>
+    </form>
+    
+</body>
+</html>
