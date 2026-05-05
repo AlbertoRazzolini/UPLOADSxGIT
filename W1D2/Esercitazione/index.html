@@ -66,43 +66,53 @@
             <img  id="biker" src="assets/Img/645796299_10239773020654696_4652793710389047168_n.jpg" alt="Io sulla moto">
             <br><br>
             <a href="javascript:void(0)">prendine una qui</a>
-        <!-- Layout esperienze e lorem-->
+        <!-- Layout, esperienze e lorem-->
         <h2>Esperienze</h2>
             <section>
-            <table>
-                <caption id="elencoesperienze">Elenco delle esperienze lavorative</caption>
-                <tr>
-                    <th>Periodo</th>
-                    <th>Ruolo</th>
-                    <th>Azienda</th>
-                </tr>
-                <tr>
-                    <td>2020-2022</td>
-                    <td>Stuart</td>
-                    <td>ACF Fiorentina</td>
-                </tr>
-                <tr>
-                    <td>2022-2025</td>
-                    <td>Garagista</td>
-                    <td>Officina meccanica Rossi</td>
-                </tr>
-                <tr>
-                    <td>2022-2024</td>
-                    <td>Magazziniere part-time</td>
-                    <td>Logistica Srl</td>
-                </tr>
-            </table>
-            <p>Inoltre ho suonato in una band per circa 4 anni, con cui abbiamo pubblicato un ep e fatto diversi concerti.
-                Dopo aver smesso per alcuni anni, ho ricominciato con un altro gruppo di amici.</p>
-            <p>Attualmente sto cercando di entrare nel mondo dello sviluppo web, e sono entusiasta di imparare nuove
-                competenze e affrontare nuove sfide in questo campo.</p>
-                <div id="lorem">
-                    <section>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde porro veniam cupiditate animi quos at voluptatibus eius asperiores recusandae nostrum tempore aliquam, dolorum soluta rem ratione, incidunt, ad non quasi.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </section>
-                </div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsa excepturi sint libero, facilis dolorum dolores quidem iure ipsum deleniti voluptates ratione culpa sequi, dignissimos consectetur odio! Provident, iusto nulla!</p>
+
+                <table>
+                    <caption id="elencoesperienze">Elenco delle esperienze lavorative</caption>
+                    <thead>
+                    <tr>
+                        <th colspan="3">Esperienze</th>
+                    </tr>
+                    
+                    <tr>
+                        <th>Periodo</th>
+                        <th>Ruolo</th>
+                        <th>Azienda</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2020-2022</td>
+                        <td>Stuart</td>
+                        <td>ACF Fiorentina</td>
+                    </tr>
+                    <tr>
+                        <td>2022-2025</td>
+                        <td>Garagista</td>
+                        <td>Officina meccanica Rossi</td>
+                    </tr>
+                    <tr>
+                        <td>2022-2024</td>
+                        <td>Magazziniere part-time</td>
+                        <td>Logistica Srl</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <p>Inoltre ho suonato in una band per circa 4 anni, con cui abbiamo pubblicato un ep e fatto diversi concerti.
+                    Dopo aver smesso per alcuni anni, ho ricominciato con un altro gruppo di amici.</p>
+                <p>Attualmente sto cercando di entrare nel mondo dello sviluppo web, e sono entusiasta di imparare nuove
+                    competenze e affrontare nuove sfide in questo campo.</p>
+                    <div id="lorem">
+                        <section>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde porro veniam cupiditate animi quos at voluptatibus eius asperiores recusandae nostrum tempore aliquam, dolorum soluta rem ratione, incidunt, ad non quasi.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </section>
+                    </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsa excepturi sint libero, facilis dolorum dolores quidem iure ipsum deleniti voluptates ratione culpa sequi, dignissimos consectetur odio! Provident, iusto nulla!</p>
             </section>
         <h2>Raccontami qualcosa di te!</h2>
         <form method="get">
@@ -131,40 +141,42 @@
         
 
         <h2>Iscriviti alla mailbox della mia band!</h2>
-        <form method="post" action="grazie.html">
-            <table>
-                <tr>
-                    <td><label for="nome">Nome completo*:</label></td>
-                    <td><input type="text" id="nome" name="nome" placeholder="Dicci come ti chiami" required></td>
-                </tr>
-                <tr>
-                    <td><label for="email">Email*:</label></td>
-                    <td><input type="email" id="email" name="email" placeholder="La tua email" required></td>
-                </tr>
-                <tr>
-                    <td><label for="telefono">Telefono:</label></td>
-                    <td><input type="tel" id="telefono" name="telefono" placeholder="Il tuo numero di telefono"></td>
-                </tr>
-                <tr>
-                    <td><label for="indirizzo">indirizzo:</label></td>
-                    <td><input type="text" id="indirizzo" name="indirizzo" placeholder="Il tuo indirizzo"></td>
-                </tr>
-            </table>
-            <br>
-            <button type="submit">Invia</button>
-            <button type="reset">Cancella</button>
-        </form>
-        <h3>*= campi obbligatori</h3>
-        <br><br>
-        <form method="get">
-            <label for="messaggio">Opinioni:</label>
-            <br>
-            <textarea id="opinione" name="messaggio"
-                placeholder="Hai ascoltato il disco?...Dimmi che ne pensi in poche parole!"></textarea>
+            <section>
+            <form method="post" action="grazie.html">
+                <table>
+                    <tr>
+                        <td><label for="nome">Nome completo*:</label></td>
+                        <td><input type="text" id="nome" name="nome" placeholder="Dicci come ti chiami" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email*:</label></td>
+                        <td><input type="email" id="email" name="email" placeholder="La tua email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="telefono">Telefono:</label></td>
+                        <td><input type="tel" id="telefono" name="telefono" placeholder="Il tuo numero di telefono"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="indirizzo">indirizzo:</label></td>
+                        <td><input type="text" id="indirizzo" name="indirizzo" placeholder="Il tuo indirizzo"></td>
+                    </tr>
+                </table>
+                <br>
+                <button type="submit">Invia</button>
+                <button type="reset">Cancella</button>
+            </form>
+            <h3>*= campi obbligatori</h3>
             <br><br>
-            <button type="submit">Invia</button>
-            <button type="reset">Cancella</button>
-        </form>
+            </section>
+            <form method="get">
+                <label for="messaggio">Opinioni:</label>
+                <br>
+                <textarea id="opinione" name="messaggio"
+                    placeholder="Hai ascoltato il disco?...Dimmi che ne pensi in poche parole!"></textarea>
+                <br><br>
+                <button type="submit">Invia</button>
+                <button type="reset">Cancella</button>
+            </form>
     </main>
     <!--Footer con informazioni di contatto -->
     <footer id="Contatti">
