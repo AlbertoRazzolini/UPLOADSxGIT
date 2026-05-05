@@ -1,0 +1,28 @@
+ table {
+    border-collapse: collapse;
+ }
+ 
+ tr, td, th {
+    border: 1px solid black;;
+ }
+
+ #opinione {
+    width: 24%;
+    height: 80px;
+ }
+
+ #elencoesperienze {
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 3px;
+ }
+
+ #biker {
+    width: 20%;
+    border-radius: 10px;
+    margin-left: 20px;
+ }
+
+ #lorem {
+    display: inline-block;
+ }
