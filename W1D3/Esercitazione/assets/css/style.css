@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap');
+
+html {
+   font-family: "Roboto", sans-serif;
+}
+
+body h2 {
+   color: #d62c20;
+}
+
+header {   
+   background-image: url(https://cdn.pixabay.com/animation/2024/07/12/02/29/02-29-04-435_512.gif);
+   background-size: cover;
+   background-position: center;
+   text-align: center;
+   padding-bottom: 50px;
+   padding-top: 50px;
+   font-size: larger;
+}
+
+nav ul li a {
+   color: antiquewhite;
+}
+
+header h1,
+header p {
+   font-style: italic;
+   color: rgb(102, 214, 10);
+}
+
+table {
+   border-collapse: collapse;
+}
+
+tr,
+td,
+th {
+   border: 1px solid black;
+}
+
+#opinioni {
+   width: 24%;
+   height: 80px;
+}
+
+#elencoesperienze {
+   font-size: larger;
+   font-weight: bold;
+   margin-bottom: 3px;
+}
+
+#biker {
+   width: 20%;
+   border-radius: 10px;
+   margin-left: 20px;
+}
+
+#lorem {
+
+   font-weight: bold;
+   color: blue;
+}
+
+#Curiosità {
+   margin-top: 10px;
+   padding-left: 10px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   width: 60%;
+   background-image: linear-gradient(10deg, #db0101, transparent);
+}
+
+#curiosità-cont {
+   width: 80%;
+}
+
+#Contatti {
+   background-color: #b9a83a6e;
+}
+
+#preferenzeutente {
+   width: 20%;
+   border: 2px solid black;
+   padding: 15px;
+}
+
+#preferenzeutente h2 {
+   margin-top: 0;
+}
+
+#iscrizione-commenti {
+   width: 20%;
+   border: 2px solid black;
+   padding: 15px;
+}
+

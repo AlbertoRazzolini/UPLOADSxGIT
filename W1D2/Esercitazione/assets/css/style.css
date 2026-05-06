@@ -24,6 +24,22 @@
  }
 
  #lorem {
+    
     font-weight: bold;
     color: blue;
+ }
+
+ #Curiosità {
+   margin-top: 10px;
+    padding-left: 10px ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 60%;
+    background-image: linear-gradient(10deg, #db0101, transparent);
+ }
+
+ #curiosità-cont {
+    width: 80%
  }
