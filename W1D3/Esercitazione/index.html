@@ -18,13 +18,13 @@
         <nav>
 
             <ul>
-                <li><a href="#Chi sono">Vai a chi sono</a></li>
+                <li><a href="Chi sono">Vai a chi sono</a></li>
                 <br>
-                <li><a href="#Competenze">Vai a competenze</a></li>
+                <li><a href="Competenze">Vai a competenze</a></li>
                 <br>
-                <li><a href="#Progetti">Vai a progetti</a></li>
+                <li><a href="Progetti">Vai a progetti</a></li>
                 <br>
-                <li><a href="#Esperienze">Vai a esperienze</a></li>
+                <li><a href="Esperienze">Vai a esperienze</a></li>
                 <br> 
                 <li><a href="#Contatti">Vai a contatti</a></li>                               
             </ul>
@@ -33,35 +33,38 @@
     </header>
     <!-- Contenuto principale -->
     <main>
-
-        <section id="Chi sono">
+        <!--Chi sono, Competenze, Progetti-->
+        <section id="Chisono">
             <h2>Chi sono</h2>
-            <img src="assets/Img/letsgooo.jpg" alt="Lets go!" width="200px" height="200px">
-            <p>Mi chiamo Alberto Razzolini, ho 33 anni. Attualmente frequento il corso Epicode per diventare sviluppatore
-                web full stack.</p>
-            
-            <p>Vivo a Firenze. Ho precedenti esperienze lavorative come stuart, garagista e magazziniere. Sono un ex-studente
-                di chimica e,da buon nerdone quale sono, un appassionato di gaming e tech.Motociclista e batterista a tempo perso.<br>Anni
-                fa avevo una band formata da quattro raccattati, ma che insieme creavano una musica (ovviamente per me) unica. Questo è il
-                nostro primo ep:</p>
-                <br>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/t6lfcLEceMM?si=5FGlmIZDdQvUp6W0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <h2 id="Competenze">Competenze</h2>
-            <p>Attualmente sto imparando HTML, CSS, JavaScript, Git e GitHub.</p>
-            <ul>
-                <li>
-                    <p>HTML- rappresenta la struttura della pagina</p>
-                </li>
-                <li>
-                    <p>CSS- gestisce lo stile e l'impaginazione</p>
-                </li>
-                <li>
-                    <p>JavaScript- il versionamento del codice</p>
-                </li>
-                <li>
-                    <p>Git e GitHub- sono strumenti per l'editor di lavoro</p>
-                </li>
-            </ul>
+                <img src="assets/Img/letsgooo.jpg" alt="Lets go!" width="200px" height="200px">
+                <div id="presentazione">
+                    <p>Mi chiamo Alberto Razzolini, ho 33 anni. Attualmente frequento il corso Epicode per diventare <span>sviluppatore
+                    web</span> full stack.</p>
+                </div>
+                <p>Vivo a Firenze. Ho precedenti esperienze lavorative come stuart, garagista e magazziniere. Sono un ex-studente
+                    di chimica e,da buon nerdone quale sono, un appassionato di gaming e tech.Motociclista e batterista a tempo perso.<br>Anni
+                    fa avevo una band formata da quattro raccattati, ma che insieme creavano una musica (ovviamente per me) unica. Questo è il
+                    nostro primo ep:</p>
+                    <br>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/t6lfcLEceMM?si=5FGlmIZDdQvUp6W0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section id="Competenze">
+                <h2>Competenze</h2>
+                <p>Attualmente sto imparando HTML, CSS, JavaScript, Git e GitHub.</p>
+                <ul>
+                    <li>
+                        <p>HTML- rappresenta la struttura della pagina</p>
+                    </li>
+                    <li>
+                        <p>CSS- gestisce lo stile e l'impaginazione</p>
+                    </li>
+                    <li>
+                        <p>JavaScript- il versionamento del codice</p>
+                    </li>
+                    <li>
+                        <p>Git e GitHub- sono strumenti per l'editor di lavoro</p>
+                    </li>
+                </ul>
         </section>
         <section id="Progetti">
             <h2>Progetti</h2>
@@ -113,7 +116,7 @@
                     <article id="Curiosità">
                         <h4>Curiosità</h4>
                         <div id="curiosità-cont">
-                        <p>Inoltre ho suonato in una band per circa 4 anni, con cui abbiamo pubblicato un ep e fatto diversi concerti con soli pezzi originali.
+                        <p> Ho suonato nella suddetta band per circa 4 anni, con cui abbiamo pubblicato un ep e fatto diversi concerti con soli pezzi originali.
                             Purtroppo, la band si è sciolta perché il nostro cantante e amico (nome d'arte Chris J. Wannabe), si è trasferito in Giappone.
                             Dopo aver smesso per alcuni anni, ho ricominciato con un altro gruppo di amici.</p>
                         </div>
@@ -158,7 +161,7 @@
             </div>
         </section>
         <!--Iscrizione mailbox e commenti-->
-        <section id="iscrizione mailbox e commenti">
+        <section id="iscrizioneMailboxECommenti">
             <h2>Iscriviti alla mailbox della mia band!</h2>
                 <div id="iscrizione-commenti">
                     <form method="post" action="grazie.html">
@@ -183,8 +186,10 @@
                             </table>
                         </div>
                         <br>
+                        <div class="button">
                         <button type="submit">Invia</button>
                         <button type="reset">Cancella</button>
+                        </div>
                     </form>
                     <h3>*= campi obbligatori</h3>
                 </div>
