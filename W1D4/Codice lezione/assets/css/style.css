@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.quotation {
+    width: 80%;
+    background-color: aquamarine;  
+    margin: 0 auto;
+
+}
+
+blockquote p {
+    border-left: 2px solid;
+}

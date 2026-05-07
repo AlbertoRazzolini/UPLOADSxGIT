@@ -1,10 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
 
-html {
-   font-family: "Roboto", sans-serif;
+html, body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.1rem;
+}
+
+main {
+   max-width: 920px;
+   margin: 0 auto;
+   padding: 40px 20px;
+}
+
+main section {
+   padding: 32px;
+   margin-bottom: 24px;
+   border: 1px solid #e4aaaa;
+   border-radius: 8px;
+   box-shadow: 0 2px 6px rgba(2, 2, 4, 0.71);
+}
+
+main section h2::before {
+   margin-right: 10px;
+   content: "---";
+   color: #66D60B;
+}
+
+section {
+   background-color: #9e9acc;
 }
 
 body h2 {
+   margin: 20px;
    color: #d62c20;
 }
 
@@ -12,9 +41,23 @@ body {
    background-color: #6d9d9d54;
 }
 
+button {
+   background-color: rgb(219, 219, 60);
+   color: black;
+   padding: 10px 25px;
+   border-radius: 4px;
+   font-size: 1rem;
+}
+
+button:hover {
+   background-color: #5e0c1b;
+   color: white;
+}
+
 /* Header start */
 
-header {
+#site-header {
+   margin-bottom: 10px;
    background-image: url(https://cdn.pixabay.com/animation/2024/07/12/02/29/02-29-04-435_512.gif);
    background-size: cover;
    background-position: center;
@@ -26,19 +69,39 @@ header {
    font-size: larger;
 }
 
+#site-header ul  {
+   padding-left: 0;
+}
+
+#site-header h1,
+#site-header p {
+   font-size: 1.2em; 
+   font-style: italic;
+   color: rgb(102, 214, 10);
+   text-shadow:(2 2 4);
+}
+
+nav ul li {
+   display: inline-block;
+   margin: 15px;
+}
+
+nav ul li:hover {
+
+}
+
 nav ul li a {
    color: antiquewhite;
 }
 
-header h1,
-header p {
-   font-size: 1.2em; 
-   font-style: italic;
-   color: rgb(102, 214, 10);
-}
-
 /* Header end */
 /* Section Chi sono start */
+
+#Chisono img {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+}
 
 #presentazione {
    font-style: italic;
@@ -55,8 +118,9 @@ header p {
    font-weight: bold;
 }
 
-#Competenze ul li:nth-last-child {
+#Competenze ul li:last-child {
    background-image: linear-gradient(10deg, #db0101, transparent);
+   max-width: max-content ;
 }
 
 /* Section Competenze end*/
@@ -82,31 +146,36 @@ th {
    border: 1px solid black;
 }
 
-
 #elencoesperienze {
-   font-size: larger;
+   font-size: 1.3rem;
    font-weight: bold;
    margin-bottom: 3px;
+}
+
+#Esperienze table {
+   margin-bottom: 10px;
 }
 
 #Esperienze table tbody tr:nth-child(odd) {
    background-image: linear-gradient(10deg, #2318bd, transparent);
 }
 
-#lorem {
-
+#lorem section {
+   background-color: whitesmoke;
+   border: none;
    font-weight: bold;
-   color: blue;
+   color: rgba(72, 72, 192, 0.842);
 }
 
 /* Article Curiosità start */
+
+#curiosità-cont 
 
 #Curiosità h4 {
    padding-right: 10px;
 }
 
 #Curiosità {
-   margin-top: 10px;
    padding-left: 10px;
    display: flex;
    flex-direction: row;
@@ -149,7 +218,12 @@ th {
 }
 
 .form {
+   border: 2px solid black;
    background-image: linear-gradient(10deg, #2318bd, transparent);
+}
+
+.form input:hover {
+   background-color: #313046a8;
 }
 
 /* Section iscrizioneMailboxECommenti end */
