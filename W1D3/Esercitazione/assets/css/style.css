@@ -28,6 +28,7 @@ nav ul li a {
 
 header h1,
 header p {
+   font-size: 1.2em; 
    font-style: italic;
    color: rgb(102, 214, 10);
 }
@@ -50,9 +51,21 @@ header p {
    font-weight: bold;
 }
 
-#Competenze ul:nth-child(1,3) {
-   back
+#Competenze ul li:nth-last-child {
+   background-image: linear-gradient(10deg, #db0101, transparent);
 }
+
+/* Section Competenze end*/
+/* Section Progetti */
+
+#biker {
+   width: 20%;
+   border-radius: 10px;
+   margin-left: 20px;
+}
+
+/* Section Progetti end*/
+/* Section Esperienze */
 
 table {
    border-collapse: collapse;
@@ -71,10 +84,8 @@ th {
    margin-bottom: 3px;
 }
 
-#biker {
-   width: 20%;
-   border-radius: 10px;
-   margin-left: 20px;
+#Esperienze table tbody tr:nth-child(odd) {
+   background-image: linear-gradient(10deg, #2318bd, transparent);
 }
 
 #lorem {
@@ -82,6 +93,8 @@ th {
    font-weight: bold;
    color: blue;
 }
+
+/* Article Curiosità */
 
 #Curiosità h4 {
    padding-right: 10px;
@@ -102,6 +115,9 @@ th {
    width: 80%;
 }
 
+/* Article Curiosità end*/
+/* Section Esperienze end*/
+
 #Contatti {
    background-color: #b9a83a6e;
 }
@@ -120,7 +136,7 @@ th {
 
 #iscrizione-commenti {
    width: fit-content;
-   background-color: aquamarine;
+   background-image: linear-gradient(10deg, #db0101, transparent);
    border: 2px solid black;
    padding: 15px;
    padding-bottom: 0;
