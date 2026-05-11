@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
 
-html, body {
+*, *::before, *::after {
+   box-sizing: border-box
+}
+
+body {
 	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.1rem;
 }
@@ -29,7 +31,7 @@ main section h2::before {
 }
 
 section {
-   background-color: #9e9acc;
+   background-image: linear-gradient(10deg, rgb(56, 163, 163), transparent )
 }
 
 body h2 {
@@ -47,6 +49,7 @@ button {
    padding: 10px 25px;
    border-radius: 4px;
    font-size: 1rem;
+   cursor: pointer;
 }
 
 button:hover {
@@ -78,16 +81,19 @@ button:hover {
    font-size: 1.2em; 
    font-style: italic;
    color: rgb(102, 214, 10);
-   text-shadow:(2 2 4);
+   text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 nav ul li {
+   list-style-type: none;
    display: inline-block;
    margin: 15px;
+   padding: 15px;
+   border-radius: 5px;
 }
 
 nav ul li:hover {
-
+   background-color: #66d60b48;   
 }
 
 nav ul li a {
@@ -97,10 +103,21 @@ nav ul li a {
 /* Header end */
 /* Section Chi sono start */
 
-#Chisono img {
-   width: 200px;
-   height: 200px;
+#Chisono .avatar {
+   width: 110px;
+   height: 110px;
+   border: 4px solid black;
    border-radius: 50%;
+   float: left;
+   margin: 0 24px 12px 0;
+}
+
+#presentazione::first-letter {
+   font-size: 3.0em;
+   font-weight: bold;
+   float:left;
+   margin-rigth: 6px;
+   color:#D62C20;
 }
 
 #presentazione {
@@ -111,20 +128,45 @@ nav ul li a {
    font-weight: bold;
 }
 
+#Chisono iframe {
+   border-radius: 5px;
+}
+
 /* Section Chi Sono end */
 /* Section Competenze start */
 
-#Competenze ul li:nth-child(1) {
+#Competenze ul li:nth-child(2) {
    font-weight: bold;
 }
 
 #Competenze ul li:last-child {
    background-image: linear-gradient(10deg, #db0101, transparent);
-   max-width: max-content ;
+   max-width:max-content ;
+   border-radius: 5px;
+   padding: 0 10px;
 }
 
 /* Section Competenze end*/
 /* Section Progetti start */
+
+#ricetta::after {
+   content: 'NEW';
+   font-weight: lighter;
+   color: whitesmoke;
+   background-color: rgb(148, 40, 40);
+   display: inline-block;
+   border: 1px solid red;
+   border-radius: 12%;
+   padding: 7px;
+   margin-left: 4px;
+}
+
+#getnutella::before, #getnutella::after {
+   content: "\2605";
+   color: gold;
+   font-size: 40px;
+   margin-bottom: ;
+}
 
 #biker {
    width: 20%;
@@ -161,6 +203,7 @@ th {
 }
 
 #lorem section {
+   background-image: none;
    background-color: whitesmoke;
    border: none;
    font-weight: bold;
@@ -172,21 +215,21 @@ th {
 #curiosità-cont 
 
 #Curiosità h4 {
+   float: left;
    padding-right: 10px;
 }
 
 #Curiosità {
    padding-left: 10px;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: nowrap;
-   justify-content: space-between;
-   width: 60%;
+   display: inline-block;
+   width: 78%;
    background-image: linear-gradient(10deg, #db0101, transparent);
+   border-radius: 5px;
 }
 
 #curiosità-cont {
-   width: 80%;
+   width: auto;
+   padding-right: 10px;
 }
 
 /* Article Curiosità end */
@@ -198,12 +241,17 @@ th {
    width: fit-content;
    border: 2px solid black;
    padding: 15px;
+   border-radius: 5px;
 }
 
 #preferenzeutente h2 {
    font-weight: lighter;
    color: black;
    margin-top: 0;
+}
+
+#preferenzeutente h2::before {
+   display: none;
 }
 
 /* Section Preferenze end */
@@ -215,6 +263,7 @@ th {
    border: 2px solid black;
    padding: 15px;
    padding-bottom: 0;
+   border-radius: 5px;
 }
 
 .form {
@@ -222,8 +271,14 @@ th {
    background-image: linear-gradient(10deg, #2318bd, transparent);
 }
 
+.form input {
+   background-image: none;
+   font-style: italic;
+}
+
 .form input:hover {
-   background-color: #313046a8;
+   background-image: none ;
+   background-color: #c8e3eef3;
 }
 
 /* Section iscrizioneMailboxECommenti end */
@@ -236,6 +291,10 @@ th {
 
 #Contatti {
    background-color: #b9a83a6e;
+}
+
+#contatti-copyright:last-child {
+    margin-bottom: 0;
 }
 
 /*Section Contatti end*/
