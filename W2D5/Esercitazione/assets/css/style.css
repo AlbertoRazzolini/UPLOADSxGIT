@@ -107,7 +107,7 @@ Il primo stamperà true perché il valore del primo equivale a quello del second
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/*La prima perché fa concatenzaione e mi rende una stringa, la seconda , la terza perché true=1 quindi 1+1, la quarta
+/*La prima perché fa concatenzaione e mi rende una stringa, la seconda mi rende la differenza dei due valori , la terza perché true=1 quindi 1+1, la quarta
 console.log("5" + 3);
 console.log("5" - 3);
 console.log(true + 1);
