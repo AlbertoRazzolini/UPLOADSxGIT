@@ -62,7 +62,7 @@ console.log(`età 5 anni fa ${myAge - 5}`);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 /*let eta = 33
-let maggiorenne = eta>=18
+let maggiorenne = eta >= 18
 console.log(`maggiorenne? ${eta >= 18}`);*/
 
 /* ESERCIZIO 5 — Tipo del valore
@@ -100,10 +100,10 @@ Il primo stamperà true perché il valore del primo equivale a quello del second
 /* ESERCIZIO 7 — Conversioni implicite
    Senza eseguire il codice, prevedi in commento il risultato di queste 4 espressioni.
    Poi stampale per verificare.
-   - "5" + 3 //"53"
-   - "5" - 3 //2
-   - true + 1 //2
-   - "10" * "2" //20
+   - "5" + 3 // "53" per farlo diventare numero trasformo la stringa con parseInt in numero, quindi mi stampa 8.
+   - "5" - 3 // 2
+   - true + 1 // 2
+   - "10" * "2" // 20
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -144,3 +144,13 @@ const p = a + b + c
 if a === b && b === c allora è equilatero
 if a === b || a === c || b === c allora è isoscele
 sennò è scaleno
+
+console.log(`il perimetro è ${p} centimetri`)
+
+if (a === b && b === c) {
+   console.log('Il triangolo + equilatero');
+} else if (a === b || b === c || c === a); {
+   console.log('Il triangolo è isoscele');
+} else {
+   console.log('Il triangolo è scaleno');
+}
