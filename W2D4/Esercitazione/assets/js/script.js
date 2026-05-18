@@ -54,7 +54,7 @@ console.log(distanzaDa19(25));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function dentroIntervallo(n) {
-  return (n >= 20 && n <= 100) || n === 400;
+  return (n >= 20 && n <= 100) || n === 400; // meglio usare gli if, perché la funzione sa di essere un boolean ma non sa di essere false in partenza
 }
 console.log(dentroIntervallo(16));
 console.log(dentroIntervallo(47));
@@ -68,6 +68,7 @@ console.log(dentroIntervallo(400));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function epify(testo) {
+  // (testo = '') -> function epify(testo = '') gli dico che testo è stringa per far si che quando scrivo startsWith mi si autocompila
   if (testo.startsWith("EPICODE")) {
     return testo;
   }
@@ -81,7 +82,9 @@ console.log(epify(" evviva"));
 /* SCRIVI QUI LA TUA RISPOSTA */
 function divisibilePer3o7(n) {
   return n > 0 && (n % 3 === 0 || n % 7 === 0); // se n>0 e n è divisibile per 3 o per 7 -> true
+  // if (n > 0 && (n %3 === 0 || n % 7 === 0)){return true;} return false;
 }
+console.log(divisibilePer3o7(-12));
 console.log(divisibilePer3o7(47));
 /* ESERCIZIO 7 — invertiStringa
    Funzione invertiStringa(testo): ritorna la stringa invertita.
@@ -106,21 +109,41 @@ console.log(invertiStringa("EPICODE"));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+const inizialiMaiuscole = function (frase = "") {
+  const words = frase.split("");
+  const result = [];
+  for (const word of words) {
+    const firstLetter = word.slice(0, 1).toUpperCase();
+    const remain = word.slice(1);
+    result.push(firstLetter + remain);
+  }
+  return result.join("");
+};
+console.log(inizialiMaiuscole("pippo pluto e paperino"));
 /* ESERCIZIO 9 — togliPrimoEUltimo
    Funzione togliPrimoEUltimo(testo): rimuovi primo e ultimo carattere.
    Usa slice. Prova con "EPICODE".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+const togliPrimoEUltimo = function (testo) {
+  return testo.slice(1, testo.length - 1);
+};
+console.log(togliPrimoEUltimo("Mario Rossi"));
 /* ESERCIZIO 10 — dammiCasuali
    Funzione dammiCasuali(n): ritorna un array di n numeri interi casuali tra 0 e 10 (inclusi).
    Usa Math.random e Math.floor.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+const dammiCasuali = function (n) {
+  const casualNumbers = [];
+  for (let i = 0; i < n; i++) {
+    casualNumbers.push(Math.floor(Math.random() * 11));
+  }
+  return casualNumbers;
+};
+console.log(dammiCasuali(8));
 /* --EXTRA-- ESERCIZIO 11 — etaInGiorni
    Funzione etaInGiorni(annoNascita, meseNascita, giornoNascita).
    Ritorna l'età in giorni rispetto a oggi.
@@ -132,3 +155,19 @@ console.log(invertiStringa("EPICODE"));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const etaInGiorni = function (annoNascita, meseNascita, giornoNascita) {
+  const oggi = new Date();
+  const nascita = new Date(annoNascita, meseNascita - 1, giornoNascita);
+  const millisecondi = oggi - nascita;
+  const giorni = Math.floor(millisecondi / (1000 * 60 * 60 * 24));
+  console.log(`Hai ${giorni} giorni`);
+};
+etaInGiorni(1992, 5, 31);
+
+const calcoloTempo = function (secondi) {
+  const ore = Math.floor(secondi / (60 * 60));
+  const min = Math.floor((secondi % (60 * 60)) / 60);
+  const sec = secondi % 60; // Ma se facessi const sec = (secondi -((Ore*3600)+(min*60))? va bene lo stesso.
+  console.log(`${ore} ore, ${min} minuti, ${sec} secondi`);
+};
+calcoloTempo(25473);
