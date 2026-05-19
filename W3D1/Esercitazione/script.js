@@ -81,6 +81,11 @@ const persona = {
 };
 const { nome, cognome, eta } = persona;
 console.log(nome, cognome, eta);
+// Se avessi voluto usare utenti:
+const persons = [];
+utenti.forEach((utente) => {
+  persons.push;
+});
 
 /* ESERCIZIO 3 — Destructuring nei parametri
    Scrivi una arrow function "riepilogo" che riceve un utente e ritorna
