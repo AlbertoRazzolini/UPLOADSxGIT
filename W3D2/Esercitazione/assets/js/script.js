@@ -43,5 +43,6 @@ function data() {
 function creaBottone {
   const btn = document.createElement("button");
   btn.textContent = "Elimina";
+  btn.classList.add('button');
   li.appendChild(btn);
 }
