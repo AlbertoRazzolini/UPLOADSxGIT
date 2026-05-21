@@ -36,13 +36,11 @@ const printCurrentMonth = () => {
 
 printCurrentMonth();
 
-const daysInMonth = () => {
-  const lastDay = new Date(getYear, getMonth + 1, 0); // gli stiamo chiedendo il giorno 0 del mese successivo, ad esempio lo 0 giugno 2026, che sarà il 31 Maggio
+const dayInMonth = () => {
+  const lastDay = new Date(getYear, getMonth + 1, 0); // Glistiamo chiedendo il giorno 0 del mese successivo, ad esempio, lo zero giugno 2026, che sarà il 31 maggio 2026
   const numberOfDays = lastDay.getDate();
   return numberOfDays;
 };
-
-daysInMonth();
 
 // Creiamo la griglia
 const createDays = (daysNumber) => {
@@ -50,21 +48,26 @@ const createDays = (daysNumber) => {
   for (let i = 1; i <= daysNumber; i++) {
     const dayCellDiv = document.createElement("div");
     dayCellDiv.classList.add("day");
-    // le celle dovranno essere cliccabili - DA FARE
+    // Le celle dovranno essere cliccabili - DAFARE
+    dayCellDiv.addEventListener("click", function () {
+      unselectAllaDays(); // deselezionare il giorno selezionato prima
+      dayCellDiv.classList.add("selected");
+      changeMeetingDay(i);
+    });
 
-    // creiamo il giorno
+    // Creiamo il giorno
     const cellValue = document.createElement("h3");
-    const thisDate = i;
-    // evidenziamo il giorno corrente
-    if (thisDate === now.getDate()) {
+    // Evidenziamo il giorno corrente
+    if (i === now.getDate()) {
       dayCellDiv.classList.add("currentDay");
     }
-    // scriviamo le domeniche in rosso
-    let thisDay = new Date(getYear, getMonth, thisDate);
+    // Scriviamo le domeniche in rosso
+    let thisDay = new Date(getYear, getMonth, i);
     if (thisDay.getDay() === 0) {
       cellValue.classList.add("sunday");
     }
-    // scriviamo il nome del giorno
+
+    // Scriviamo il nome del giorno
     let dayNumber = thisDay.getDay();
     let dayName = dayNames[dayNumber];
     cellValue.textContent = `${dayName} ${i}`;
@@ -73,4 +76,17 @@ const createDays = (daysNumber) => {
   }
 };
 
-createDays(daysInMonth());
+createDays(dayInMonth());
+
+function unselectAllaDays() {
+  const previousSelected = document.querySelector(".selected");
+  if (previousSelected) {
+    previousSelected.classList.remove("selected");
+  }
+}
+
+function changeMeetingDay(i) {
+  const newMeetingDay = document.querySelector("#newMeetingDay");
+  newMeetingDay.textContent = i;
+  newMeetingDay.classList.add("daySelected");
+}
