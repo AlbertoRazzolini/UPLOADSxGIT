@@ -22,18 +22,20 @@ const campoTask = document.querySelector("#campo-task");
 const errore = document.querySelector("#errore");
 const listaTask = document.querySelector("#lista-task");
 
-
 formTask.addEventListener("submit", (e) => {
   e.preventDefault();
   if (campoTask.value === "") {
     errore.textContent = "Devi aggiungere una task";
+    return;
   } else {
     const nuovaTask = {
-    id: ,
-    testo: ,
-    string: ,
-    completato: ,
-    }
+      id: tasks.length + 1,
+      testo: campoTask.value,
+      completato: false,
+    };
     tasks.push(nuovaTask);
+    campoTask.value = "";
+    errore.textContent = "";
+    rendiLista();
   }
 });
