@@ -16,3 +16,64 @@ h1 {
   font-size: 4em;
   font-weight: 900;
 }
+
+/* Griglia calendario */
+
+.day {
+  display: inline-block;
+  width: 14%;
+  height: 130px;
+  /* Per poter posizionare al centro il giorno, ho bisogno di position relative di questo div e position absolute del giorno */
+  position: relative;
+  border: 1px solid #0d6f83;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.day:hover,
+.day:hover h3 {
+  background-color: #15132e;
+}
+
+.day h3 {
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+}
+
+.currentDay,
+.currentDay:hover {
+  background-color: #ffc0cb;
+}
+
+.sunday {
+  color: red;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#addMeeting div {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 50px;
+}
+
+#addMeeting h4 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: inline;
+}
+
+#newMeetingDay {
+  display: inline-block;
+  min-height: 24px;
+}
