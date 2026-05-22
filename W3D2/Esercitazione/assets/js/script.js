@@ -38,11 +38,32 @@ aggiungiTask("Scaccolarsi", "bassa");
 
 function data() {
   const data = new Date().toLocaleString("it-IT");
+  return data;
 }
 
-function creaBottone {
+function creaBottone(li) {
   const btn = document.createElement("button");
   btn.textContent = "Elimina";
-  btn.classList.add('button');
+  btn.classList.add("button");
   li.appendChild(btn);
+  btn.addEventListener("click", () => {
+    li.remove();
+    aggiornaContatore();
+  });
+}
+
+function evidenzia(indice) {
+  const tasks = lista.querySelectorAll("li");
+  tasks[indice].classList.add("evidenziato");
+}
+
+function togliEvidenza(indice) {
+  const tasks = lista.querySelectorAll("li");
+  tasks[indice].classList.remove("evidenziato");
+}
+
+function contaPerPriorita() {
+  const alta = lista.querySelectorAll(".priorita-alta");
+  const media = lista.querySelectorAll(".priorita-media");
+  const bassa = lista.querySelectorAll(".priorita-bassa");
 }
