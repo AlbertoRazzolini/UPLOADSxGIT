@@ -86,7 +86,7 @@ main {
 /* Sezioni come card */
 main section {
   background-color: #ffffff;
-  padding: 20px 0;
+  padding: 20px 20px;
   margin-bottom: 24px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -182,15 +182,22 @@ h3 {
 
 /* Esperienze: tabella esperienze */
 
+/* Tabella esperienze */
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
 table {
-  overflow: auto;
   width: 100%;
   border-collapse: collapse;
+  min-width: 480px;
 }
 
 th,
 td {
   border-bottom: 1px solid black;
+  text-align: left;
   padding: 8px;
 }
 
@@ -234,6 +241,10 @@ textarea:focus {
   color: #000000;
 }
 
+#motivo {
+  width: 100%;
+}
+
 #consenso {
   width: auto;
 }
@@ -259,19 +270,6 @@ button:hover {
   color: hsl(45, 90%, 80%);
   background-color: hsl(220, 60%, 45%);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Tabella esperienze */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  border-bottom: 1px solid black;
-  text-align: left;
-  padding: 8px;
 }
 
 /* Footer */
