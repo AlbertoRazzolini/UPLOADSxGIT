@@ -128,6 +128,12 @@ main {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  align-self: flex-end;
 }
 
 /* Overlay */
@@ -345,7 +351,7 @@ button:hover {
   input,
   textarea,
   select {
-    width: 60%;
+    width: 70%;
   }
   button {
     width: auto;
@@ -358,11 +364,12 @@ button:hover {
   bottom: 20px;
   right: 20px;
   border-radius: 50%;
-  background-color: blue;
+  background-color: #1f3d7a;
   color: white;
-  padding: 48px 48px;
+  padding: 45px 50px;
   z-index: 50;
 }
+
 /* Footer */
 #site-footer {
   background-color: hsl(220, 40%, 15%);
@@ -378,4 +385,18 @@ button:hover {
     line-height: 2.4;
     padding: 30px 20px;
   }
+}
+
+#riepilogo-contatto {
+  background-color: rgba(12, 184, 12, 0.247);
+  border-radius: 5px;
+  border-left: 3px solid green;
+}
+
+#riepilogo-contatto h3 {
+  margin-top: 2px;
+}
+
+#riepilogo-contatto p:last-of-type {
+  margin-bottom: 2px;
 }
