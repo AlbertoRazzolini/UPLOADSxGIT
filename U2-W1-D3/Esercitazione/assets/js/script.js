@@ -40,13 +40,28 @@ document.querySelector(".modal form").addEventListener("submit", function (e) {
   const messaggio = document.getElementById("messaggio").value;
 
   const riepilogo = document.getElementById("riepilogo-contatto");
-  riepilogo.innerHTML = `
-    <h3>Registrazione</h3>
-    <p><strong>Nome:</strong> ${nome}</p>
-    <p><strong>Email:</strong> ${email}</p>
-    <p><strong>Motivo:</strong> ${motivo}</p>
-    ${data ? `<p><strong>Data preferita:</strong> ${data}</p>` : ""}
-    <p><strong>Messaggio:</strong> ${messaggio}</p>
-  `;
+  riepilogo.textContent = "";
+
+  const titolo = document.createElement("h3");
+  titolo.textContent = "Registrazione";
+  riepilogo.appendChild(titolo);
+
+  const campi = [
+    ["Nome", nome],
+    ["Email", email],
+    ["Motivo", motivo],
+    ...(data ? [["Data preferita", data]] : []),
+    ["Messaggio", messaggio],
+  ];
+
+  campi.forEach(([etichetta, valore]) => {
+    const p = document.createElement("p");
+    const strong = document.createElement("strong");
+    strong.textContent = etichetta + ": ";
+    p.appendChild(strong);
+    p.appendChild(document.createTextNode(valore));
+    riepilogo.appendChild(p);
+  });
+
   riepilogo.removeAttribute("hidden");
 });
