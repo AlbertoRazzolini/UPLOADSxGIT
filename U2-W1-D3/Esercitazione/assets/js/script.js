@@ -59,9 +59,10 @@ document.querySelector(".modal form").addEventListener("submit", function (e) {
     const strong = document.createElement("strong");
     strong.textContent = etichetta + ": ";
     p.appendChild(strong);
-    p.appendChild(document.createTextNode(valore));
+    p.append(valore);
     riepilogo.appendChild(p);
   });
 
   riepilogo.removeAttribute("hidden");
+  document.querySelector(".modal form").reset();
 });
