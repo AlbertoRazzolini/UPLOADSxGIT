@@ -1,0 +1,49 @@
+@use "partials/colors" as myColors;
+@use "partials/boxMeasure" as myBoxMeasures;
+@use "partials/fontSize" as myFontSize;
+
+body {
+  background-color: myColors.$bgColor;
+}
+
+h1 {
+  font-size: myFontSize.$titleSize;
+  color: myColors.$titleColor;
+}
+
+.container {
+  display: myBoxMeasures.$boxSystem;
+  section h2,
+  article h2 {
+    color: myColors.$titleColor;
+  }
+
+  section {
+    background-color: aqua;
+    h2 {
+      font-size: myFontSize.$titleSection;
+    }
+  }
+
+  article {
+    background-color: aquamarine;
+    h2 {
+      font-size: myFontSize.$titleArticle;
+    }
+  }
+
+  /* nesting errato, poco gestibile con specifictà altissima */
+  .page {
+    .container {
+      .row {
+        .col {
+          .card {
+            .title {
+              font-size: myFontSize.$titleSize;
+            }
+          }
+        }
+      }
+    }
+  }
+}

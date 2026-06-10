@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/style.scss","../scss/partials/_colors.scss","../scss/partials/_fontSize.scss","../scss/partials/_boxMeasure.scss"],"names":[],"mappings":";AAIA;EACE,kBCLQ;;;ADQV;EACE,WERU;EFSV,OCTW;;;ADYb;EACE,SGdU;;AHeV;AAAA;EAEE,OChBS;;ADmBX;EACE;;AACA;EACE,WErBS;;AFyBb;EACE;;AACA;EACE,WE3BS;;AFUf;AAqBE;;AAMU;EACE,WExCF","file":"style.css"}
