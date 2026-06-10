@@ -1,0 +1,17 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/cards';
+
+// Applicazione tema chiaro
+body {
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+  @include tema(
+    $bg: #fafafa,
+    $testo: #1a1a1a,
+    $card-bg: #ffffff,
+    $bordo: #e0e0e0,
+    $muted: #6c757d
+  );
+}
