@@ -1,4 +1,10 @@
-@use 'variables' as *;
+@use "variables" as *;
+
+@mixin solo-su($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
 
 @mixin tema($bg, $testo, $card-bg, $bordo, $muted) {
   background-color: $bg;
@@ -6,10 +12,17 @@
   .card {
     background-color: $card-bg;
     border-color: $bordo;
+    color: $testo;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $testo;
+    }
   }
-  .card .card-text {
-    color: $muted;
-  }
+
   .card-footer {
     background-color: $card-bg;
   }

@@ -1,17 +1,35 @@
-@use 'partials/variables' as *;
-@use 'partials/mixins' as *;
-@use 'partials/cards';
+@use "partials/variables" as myVariables;
+@use "partials/mixins" as myMixins;
+@use "partials/cards" as myCards;
 
 // Applicazione tema chiaro
 body {
   transition:
     background-color 200ms ease,
     color 200ms ease;
-  @include tema(
+  @include myMixins.tema(
     $bg: #fafafa,
     $testo: #1a1a1a,
     $card-bg: #ffffff,
     $bordo: #e0e0e0,
     $muted: #6c757d
+  );
+}
+// Applicazione tema scuro
+body.dark {
+  .navbar {
+    background-color: myVariables.$brand-primary-dark !important;
+  }
+  .card {
+    // sovrascrive la variabile CSS nativa di Bootstrap (prefisso --bs-)
+    // usata da .text-muted per il colore del testo grigio
+    --bs-secondary-color: #f0f0f0;
+  }
+  @include myMixins.tema(
+    $bg: #1a1a1a,
+    $testo: #f0f0f0,
+    $card-bg: #1a1a1a,
+    $bordo: #333,
+    $muted: #ffffff
   );
 }

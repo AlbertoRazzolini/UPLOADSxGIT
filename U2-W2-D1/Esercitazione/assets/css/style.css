@@ -10,6 +10,11 @@
 .card .card-title {
   font-weight: bold;
 }
+@media (min-width: 768px) {
+  .card {
+    padding: 24px;
+  }
+}
 
 body {
   transition: background-color 200ms ease, color 200ms ease;
@@ -19,9 +24,15 @@ body {
 body .card {
   background-color: #ffffff;
   border-color: #e0e0e0;
+  color: #1a1a1a;
 }
-body .card .card-text {
-  color: #6c757d;
+body .card h1,
+body .card h2,
+body .card h3,
+body .card h4,
+body .card h5,
+body .card h6 {
+  color: #1a1a1a;
 }
 body .card-footer {
   background-color: #ffffff;
@@ -34,6 +45,42 @@ body aside .bg-light {
 body .modal-content {
   background-color: #ffffff;
   color: #1a1a1a;
+}
+
+body.dark .navbar {
+  background-color: rgb(1.5532786885, 76.887295082, 187.9467213115) !important;
+}
+body.dark .card {
+  --bs-secondary-color: #f0f0f0;
+}
+body.dark {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+body.dark .card {
+  background-color: #1a1a1a;
+  border-color: #333;
+  color: #f0f0f0;
+}
+body.dark .card h1,
+body.dark .card h2,
+body.dark .card h3,
+body.dark .card h4,
+body.dark .card h5,
+body.dark .card h6 {
+  color: #f0f0f0;
+}
+body.dark .card-footer {
+  background-color: #1a1a1a;
+}
+body.dark aside .bg-light {
+  background-color: #1a1a1a !important;
+  border-color: #333;
+  color: #f0f0f0;
+}
+body.dark .modal-content {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
 }
 
 /*# sourceMappingURL=style.css.map */
