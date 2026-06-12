@@ -15,6 +15,34 @@ body {
     $muted: #6c757d
   );
 }
+// Override colore primario Bootstrap
+.btn-primary,
+.bg-primary,
+.navbar.bg-primary {
+  background-color: myVariables.$brand-primary !important;
+  border-color: myVariables.$brand-primary !important;
+}
+
+.btn-primary:hover {
+  background-color: darken(myVariables.$brand-primary, 10%) !important;
+}
+
+.text-primary {
+  color: myVariables.$brand-primary !important;
+}
+
+.btn-outline-primary {
+  border-color: myVariables.$brand-primary !important;
+  color: myVariables.$brand-primary !important;
+
+  &:hover,
+  &.active {
+    background-color: myVariables.$brand-primary !important;
+    border-color: myVariables.$brand-primary !important;
+    color: #ffffff !important;
+  }
+}
+
 // Applicazione tema scuro
 body.dark {
   .navbar {

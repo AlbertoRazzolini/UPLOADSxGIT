@@ -6,6 +6,18 @@
   }
 }
 
+@mixin card-prodotto($accent) {
+  border-top: 4px solid $accent;
+
+  .card-title {
+    color: $accent;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 18px rgba($accent, 0.3);
+  }
+}
+
 @mixin tema($bg, $testo, $card-bg, $bordo, $muted) {
   background-color: $bg;
   color: $testo;
