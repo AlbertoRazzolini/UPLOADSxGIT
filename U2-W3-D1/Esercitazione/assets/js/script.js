@@ -10,11 +10,14 @@
 
 // === Classi ===
 class Libro {
+  static contatore = 0; // conta tutte le istanze create (Libro + LibroDigitale)
+
   constructor(titolo, autore, anno) {
     this.titolo = titolo;
     this.autore = autore;
     this.anno = anno;
     this.letto = false;
+    Libro.contatore++;
   }
 
   segnaComeLetto() {
