@@ -42,6 +42,10 @@
                 <option value="digitale">Digitale</option>
               </select>
             </div>
+            <div class="mb-3 campo-mb nascosto" id="campo-mb">
+              <label for="dimensione-mb" class="form-label fw-bold">Dimensione (MB)</label>
+              <input type="number" class="form-control" id="dimensione-mb" min="0" step="0.1" />
+            </div>
             <button type="submit" class="btn btn-primary px-4">Aggiungi</button>
           </form>
         </div>
@@ -54,6 +58,19 @@
         </ul>
       </section>
     </main>
+    <template id="libro-tpl">
+      <li class="libro-item">
+        <div class="libro-info">
+          <span class="libro-titolo">
+            <span class="libro-nome"></span>
+            <span class="badge-formato"></span>
+          </span>
+          <span class="libro-meta"></span>
+        </div>
+        <button class="btn btn-outline-secondary btn-sm btn-segna">Segna come letto</button>
+      </li>
+    </template>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

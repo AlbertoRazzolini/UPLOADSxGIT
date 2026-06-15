@@ -30,6 +30,11 @@ body {
 .site-header p  { margin: 0; opacity: 0.85; }
 
 
+/* Campo MB visibile solo se digitale */
+.nascosto {
+  display: none;
+}
+
 /* Form card */
 .form-card {
   background: #ffffff;
