@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini-libreria — Settimana VII Giorno I</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>La mia libreria</h1>
+      <p>Aggiungi i tuoi libri e segnali come letti.</p>
+    </header>
+
+    <main class="container">
+      <section class="form-section">
+        <div class="form-card">
+          <h2>Aggiungi un libro</h2>
+          <form id="form-libro">
+            <div class="mb-3">
+              <label for="titolo" class="form-label fw-bold">Titolo</label>
+              <input type="text" class="form-control" id="titolo" required />
+            </div>
+            <div class="mb-3">
+              <label for="autore" class="form-label fw-bold">Autore</label>
+              <input type="text" class="form-control" id="autore" required />
+            </div>
+            <div class="mb-3">
+              <label for="anno" class="form-label fw-bold">Anno</label>
+              <input type="number" class="form-control" id="anno" required />
+            </div>
+            <div class="mb-3">
+              <label for="formato" class="form-label fw-bold">Formato</label>
+              <select class="form-select" id="formato">
+                <option value="cartaceo">Cartaceo</option>
+                <option value="digitale">Digitale</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary px-4">Aggiungi</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="lista-section">
+        <h2 id="titolo-lista">I tuoi libri (0)</h2>
+        <ul id="lista-libri">
+          <!-- popolato da JavaScript -->
+        </ul>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

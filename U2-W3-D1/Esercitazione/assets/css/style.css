@@ -1,0 +1,117 @@
+/* Mini-libreria — Settimana VII Giorno I
+   Stile minimal: il focus è sulla logica JS, non sul layout. */
+
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: #f7f7f7;
+  color: #1a1a1a;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.site-header {
+  background: hsl(220, 50%, 25%);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.site-header h1 { margin: 0 0 8px; }
+.site-header p  { margin: 0; opacity: 0.85; }
+
+
+/* Form card */
+.form-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+  margin-bottom: 32px;
+}
+
+.form-card h2 {
+  margin: 0 0 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* Lista libri */
+.lista-section h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+#lista-libri {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.libro-item {
+  background: #ffffff;
+  border-radius: 6px;
+  border-left: 4px solid hsl(220, 50%, 40%);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.libro-item.letto {
+  border-left-color: hsl(145, 50%, 40%);
+}
+
+.libro-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.libro-titolo {
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-formato {
+  font-size: 0.7rem;
+  font-weight: 500;
+  background: #e0e0e0;
+  color: #555;
+  border-radius: 20px;
+  padding: 2px 8px;
+}
+
+.libro-meta {
+  font-size: 0.85rem;
+  color: hsl(220, 50%, 35%);
+}
+
+.libro-item.letto .libro-meta {
+  color: hsl(145, 50%, 30%);
+}
+
+.stato-letto {
+  font-size: 0.85rem;
+  color: hsl(145, 50%, 35%);
+  font-weight: 600;
+  white-space: nowrap;
+}
