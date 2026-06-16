@@ -9,6 +9,30 @@
 // Bonus: bottone "Segna come letto" su ogni elemento, gestito con event delegation.
 
 // === Classi ===
+const STORAGE_KEY = "libri";
+
+function salvaLibri() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(libri));
+}
+
+function caricaLibri() {
+  const data = localStorage.getItem(STORAGE_KEY);
+  if (data === null) {
+    return [];
+  } else {
+    return JSON.parse(data).map((d) => {
+      let l;
+      if (d.dimensioneMb !== undefined) {
+        l = new LibroDigitale(d.titolo, d.autore, d.anno, d.dimensioneMb);
+      } else {
+        l = new Libro(d.titolo, d.autore, d.anno);
+      }
+      l.letto = d.letto;
+      return l;
+    });
+  }
+}
+
 class Libro {
   static contatore = 0; // conta tutte le istanze create (Libro + LibroDigitale)
 
@@ -42,8 +66,7 @@ class LibroDigitale extends Libro {
 
 // === Stato (array di libri) ===
 
-const libri = [];
-
+let libri = caricaLibri();
 
 // === Render ===
 
@@ -60,7 +83,8 @@ function render() {
 
     clone.querySelector(".libro-nome").textContent = libro.titolo;
     clone.querySelector(".badge-formato").textContent = libro.formatoLabel;
-    clone.querySelector(".libro-meta").textContent = `${libro.autore} — ${libro.anno}`;
+    clone.querySelector(".libro-meta").textContent =
+      `${libro.autore} — ${libro.anno}`;
 
     const li = clone.querySelector(".libro-item");
     const btn = clone.querySelector(".btn-segna");
@@ -78,7 +102,6 @@ function render() {
     listaLibri.appendChild(clone);
   });
 }
-
 
 // === Eventi ===
 
@@ -102,7 +125,7 @@ form.addEventListener("submit", function (event) {
 
   let libro;
   if (formato === "digitale") {
-    // parseFloat() come parseInt() ma accetta i decimali (es. 3.5 MB)
+    // parseFloat() come parseInt() ma accetta i decimali (es. 3.3 MB)
     const mb = parseFloat(document.getElementById("dimensione-mb").value) || 0;
     libro = new LibroDigitale(titolo, autore, anno, mb);
   } else {
@@ -110,6 +133,7 @@ form.addEventListener("submit", function (event) {
   }
 
   libri.push(libro);
+  salvaLibri();
   render();
   form.reset();
   campMb.classList.add("nascosto");
@@ -121,5 +145,6 @@ listaLibri.addEventListener("click", function (event) {
   if (btn === null) return;
   const indice = parseInt(btn.dataset.indice);
   libri[indice].segnaComeLetto();
+  salvaLibri();
   render();
 });
