@@ -52,7 +52,11 @@
       </section>
 
       <section class="lista-section">
-        <h2 id="titolo-lista">I tuoi libri (0)</h2>
+        <div class="lista-header">
+          <h2 id="titolo-lista">I tuoi libri (0)</h2>
+          <button id="svuota-tutto" class="btn-svuota">Svuota tutto</button>
+        </div>
+        <p class="info-storage">I libri sono salvati nel browser e sopravvivono al refresh.</p>
         <ul id="lista-libri">
           <!-- popolato da JavaScript -->
         </ul>
@@ -67,7 +71,7 @@
           </span>
           <span class="libro-meta"></span>
         </div>
-        <button class="btn btn-outline-secondary btn-sm btn-segna">Segna come letto</button>
+        <button class="btn btn-outline-secondary btn-sm" data-azione="leggi">Segna come letto</button>
       </li>
     </template>
 

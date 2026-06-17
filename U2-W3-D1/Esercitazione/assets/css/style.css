@@ -51,9 +51,38 @@ body {
 }
 
 /* Lista libri */
-.lista-section h2 {
+.lista-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.lista-header h2 {
   font-size: 1.2rem;
   font-weight: 700;
+  margin: 0;
+}
+
+.btn-svuota {
+  background: transparent;
+  color: #c0392b;
+  border: 1px solid #c0392b;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-svuota:hover {
+  background: #c0392b;
+  color: #fff;
+}
+
+.info-storage {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #888;
   margin-bottom: 16px;
 }
 

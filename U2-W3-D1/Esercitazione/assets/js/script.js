@@ -28,6 +28,7 @@ function caricaLibri() {
         l = new Libro(d.titolo, d.autore, d.anno);
       }
       l.letto = d.letto;
+      l.id = d.id;
       return l;
     });
   }
@@ -41,6 +42,7 @@ class Libro {
     this.autore = autore;
     this.anno = anno;
     this.letto = false;
+    this.id = Date.now() + Math.random();
     Libro.contatore++;
   }
 
@@ -78,7 +80,7 @@ function render() {
   listaLibri.replaceChildren();
   titoloLista.textContent = `I tuoi libri (${libri.length})`;
 
-  libri.forEach((libro, indice) => {
+  libri.forEach((libro) => {
     const clone = libroTpl.content.cloneNode(true);
 
     clone.querySelector(".libro-nome").textContent = libro.titolo;
@@ -87,16 +89,24 @@ function render() {
       `${libro.autore} — ${libro.anno}`;
 
     const li = clone.querySelector(".libro-item");
-    const btn = clone.querySelector(".btn-segna");
+    const btnLeggi = clone.querySelector("[data-azione='leggi']");
+
+    const btnRimuovi = document.createElement("button");
+    btnRimuovi.className = "btn btn-outline-danger btn-sm";
+    btnRimuovi.dataset.azione = "rimuovi";
+    btnRimuovi.dataset.id = libro.id;
+    btnRimuovi.textContent = "Rimuovi";
 
     if (libro.letto) {
       li.classList.add("letto");
       const stato = document.createElement("span");
       stato.className = "stato-letto";
       stato.textContent = "✓ letto";
-      btn.replaceWith(stato);
+      btnLeggi.replaceWith(stato);
+      li.appendChild(btnRimuovi);
     } else {
-      btn.dataset.indice = indice;
+      btnLeggi.dataset.id = libro.id;
+      btnLeggi.after(btnRimuovi);
     }
 
     listaLibri.appendChild(clone);
@@ -139,12 +149,27 @@ form.addEventListener("submit", function (event) {
   campMb.classList.add("nascosto");
 });
 
-listaLibri.addEventListener("click", function (event) {
-  const btn = event.target.closest(".btn-segna");
-  // se il click non era sul bottone, closest() restituisce null → usciamo subito
-  if (btn === null) return;
-  const indice = parseInt(btn.dataset.indice);
-  libri[indice].segnaComeLetto();
-  salvaLibri();
+document.getElementById("svuota-tutto").addEventListener("click", () => {
+  libri = [];
+  localStorage.removeItem(STORAGE_KEY);
   render();
+});
+
+render();
+
+listaLibri.addEventListener("click", function (event) {
+  const btn = event.target.closest("[data-azione]");
+  if (btn === null) return;
+  const id = parseFloat(btn.dataset.id);
+  const azione = btn.dataset.azione;
+
+  if (azione === "leggi") {
+    libri.find(l => l.id === id).segnaComeLetto();
+    salvaLibri();
+    render();
+  } else if (azione === "rimuovi") {
+    libri = libri.filter(l => l.id !== id);
+    salvaLibri();
+    render();
+  }
 });
