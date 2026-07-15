@@ -1,0 +1,25 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout: leggiamo i .ts da assets/ts, scriviamo i .js in assets/js
+    // (esattamente dove index.html si aspetta di trovare lo script)
+    "rootDir": "./assets/ts",
+    "outDir": "./assets/js",
+
+    // Environment Settings: nessun modulo/bundler, è un singolo script
+    // caricato da <script> nel browser, non un modulo Node
+    "target": "ES2020",
+
+    // Other Outputs
+    "sourceMap": true,
+
+    // Recommended Options
+    "strict": true,
+    "skipLibCheck": true,
+
+    // Non emettere JS se ci sono errori di tipo: se sbagliamo qualcosa
+    // vogliamo accorgercene subito, non caricare nel browser un file rotto
+    "noEmitOnError": true
+  },
+  "include": ["assets/ts/**/*.ts"]
+}

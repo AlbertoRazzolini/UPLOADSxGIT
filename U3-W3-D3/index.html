@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportsHub — Eventi sportivi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>SportsHub</h1>
+      <p>
+        Cerca una squadra, scopri le prossime partite e gli ultimi risultati.
+      </p>
+      <div class="search-bar">
+        <input
+          type="text"
+          placeholder="es. Arsenal, Los Angeles Lakers, Juventus"
+          id="search-input"
+        />
+        <button id="search-btn">Cerca</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="preferite-section">
+        <h2>⭐ Le tue squadre preferite</h2>
+        <p id="preferite-placeholder">
+          Non hai ancora salvato nessuna squadra. Cercane una qui sopra e
+          aggiungila ai preferiti!
+        </p>
+        <div id="preferite-grid" class="cards-grid"></div>
+      </section>
+
+      <section id="appuntamenti-section" hidden>
+        <h2>📅 I tuoi prossimi appuntamenti</h2>
+        <div id="appuntamenti-lista"></div>
+      </section>
+
+      <section id="risultati-section">
+        <h2>Squadre trovate</h2>
+        <p id="risultati-placeholder">Volevi cercare una squadra qui sopra</p>
+        <div id="filtri-sport"></div>
+        <div id="spinner" class="spinner" hidden></div>
+        <p id="errore-msg" class="errore" hidden></p>
+        <div id="risultati-grid" class="cards-grid"></div>
+      </section>
+    </main>
+
+    <div id="modal-container"></div>
+
+    <template id="tmpl-card">
+      <div class="card">
+        <img class="card-logo" src="" alt="" />
+        <h3 class="card-nome"></h3>
+        <p class="card-lega"></p>
+        <p class="card-paese"></p>
+        <button class="btn-aggiungi">⭐ Aggiungi ai preferiti</button>
+      </div>
+    </template>
+
+    <template id="tmpl-card-preferita">
+      <div class="card">
+        <img class="card-logo" src="" alt="" />
+        <h3 class="card-nome"></h3>
+        <p class="card-lega"></p>
+        <p class="card-paese"></p>
+        <p class="card-prossimo-evento"></p>
+        <button class="btn-rimuovi">🗑 Rimuovi</button>
+      </div>
+    </template>
+
+    <template id="tmpl-evento-item">
+      <div class="evento-item">
+        <span class="evento-data"></span>
+        <div class="evento-info">
+          <strong class="evento-partita"></strong>
+          <span class="badge-punteggio" hidden></span>
+        </div>
+      </div>
+    </template>
+
+    <template id="tmpl-appuntamento">
+      <div class="appuntamento-item">
+        <span class="appuntamento-data"></span>
+        <span class="appuntamento-squadra"></span>
+        <strong class="appuntamento-partita"></strong>
+      </div>
+    </template>
+
+    <template id="tmpl-modal">
+      <div class="modal-overlay">
+        <div class="modal">
+          <button class="modal-chiudi">✕</button>
+          <h3 class="modal-nome"></h3>
+          <div class="modal-colonne">
+            <div class="modal-col">
+              <h4>Prossimi eventi</h4>
+              <div class="modal-prossimi"></div>
+            </div>
+            <div class="modal-col">
+              <h4>Ultimi risultati</h4>
+              <div class="modal-ultimi"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
